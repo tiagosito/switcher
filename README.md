@@ -1,5 +1,4 @@
-
-<img src="https://github.com/tiagosito/switcher/raw/master/doc/assets/switcher_logo_full2.png" width="100%" alt="logo" />
+<img src="https://github.com/tiagosito/switcher/raw/main/doc/assets/switcher_logo_full2.png" width="100%" alt="logo" />
 <h2 align="center">
   A beautiful and personalized switcher component.
 </h2>
@@ -30,7 +29,7 @@ dependencies:
 ```
 
 ### Adding, Select and Removing data :
-<img src="https://github.com/tiagosito/switcher/blob/master/doc/assets/switcher.gif?raw=true" width="30%" alt="Using switcher" />
+<img src="https://github.com/tiagosito/switcher/blob/main/doc/assets/switcher.gif?raw=true" width="30%" alt="Using switcher" />
 
 ```dart
 import 'package:switcher/switcher.dart';
