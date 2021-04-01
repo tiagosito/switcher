@@ -1,6 +1,6 @@
 name: switcher
 description: A beautiful animated, and personalized switcher widget component.
-version: 0.0.1+1
+version: 0.0.1+2
 homepage: https://github.com/tiagosito/switcher
 
 environment:
