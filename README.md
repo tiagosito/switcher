@@ -3,15 +3,15 @@
 <h2 align="center">
   A animated, beautiful and personalized switcher component.
 </h2>
-<h5 align="center">
-  Based on Eduardo Muñoz's widget [lite_rolling_switch](https://github.com/cgustav/lite_rolling_switch)
+
+<h5  align="center">
+
+Based on Eduardo Muñoz's widget [lite_rolling_switch](https://github.com/cgustav/lite_rolling_switch)
+
 </h5>
 
 <p>&nbsp;</p>
 
-<p>
-
-</p>
 <p align="center">
 <a href="https://pub.dartlang.org/packages/switcher">
   <img alt="Pub Package" src="https://img.shields.io/pub/v/switcher.svg">
