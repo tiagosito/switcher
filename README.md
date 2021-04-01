@@ -1,4 +1,5 @@
-<img src="https://github.com/tiagosito/switcher/raw/main/doc/assets/switcher_logo_full2.png" width="100%" alt="logo" />
+
+<img src="https://github.com/tiagosito/switcher/raw/master/doc/assets/switcher_logo_full.png" width="100%" alt="logo" />
 <h2 align="center">
   A animated, beautiful and personalized switcher component.
 </h2>
