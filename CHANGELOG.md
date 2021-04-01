@@ -1,4 +1,8 @@
-# [0.0.1+2]
+# [1.0.0]
+
+BREAKING: opt into NullSafety
+
+## [0.0.1+2]
 
 Added more examples
 

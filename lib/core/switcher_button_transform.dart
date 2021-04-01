@@ -7,17 +7,17 @@ import 'switcher_button.dart';
 
 class SwitcherButtonTransform extends StatelessWidget {
   const SwitcherButtonTransform({
-    Key key,
-    @required this.value,
-    @required this.iconOn,
-    @required this.iconOff,
-    @required this.transitionColor,
-    @required this.switcherButtonSize,
-    @required this.switcherButtonColor,
-    @required this.switcherButtonRadius,
-    @required this.switcherButtonOffset,
-    @required this.switcherButtonIconSize,
-    @required this.switcherButtonAngleTransform,
+    Key? key,
+    required this.value,
+    required this.iconOn,
+    required this.iconOff,
+    required this.transitionColor,
+    required this.switcherButtonSize,
+    required this.switcherButtonColor,
+    required this.switcherButtonRadius,
+    required this.switcherButtonOffset,
+    required this.switcherButtonIconSize,
+    required this.switcherButtonAngleTransform,
   }) : super(key: key);
 
   final double value;
@@ -36,7 +36,7 @@ class SwitcherButtonTransform extends StatelessWidget {
     return Transform.translate(
       offset: Offset(switcherButtonOffset.dx * value, switcherButtonOffset.dy),
       child: Transform.rotate(
-        angle: lerpDouble(switcherButtonAngleTransform, 2 * pi, value),
+        angle: lerpDouble(switcherButtonAngleTransform, 2 * pi, value)!,
         child: Container(
           height: switcherButtonSize,
           width: switcherButtonSize,

@@ -131,10 +131,10 @@
       "name": "switcher",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.7"
+      "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-04-01T00:26:28.391390Z",
+  "generated": "2021-04-01T11:13:25.154305Z",
   "generator": "pub",
   "generatorVersion": "2.12.0"
 }

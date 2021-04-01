@@ -24,9 +24,9 @@ class Switcher extends StatefulWidget {
   final IconData iconOn;
   final IconData iconOff;
   final Curve curveType;
-  final Function onTap;
-  final Function onDoubleTap;
-  final Function onSwipe;
+  final Function? onTap;
+  final Function? onDoubleTap;
+  final Function? onSwipe;
 
   final double _width;
   final double _height;
@@ -53,7 +53,7 @@ class Switcher extends StatefulWidget {
       this.onTap,
       this.onDoubleTap,
       this.onSwipe,
-      this.onChanged})
+      required this.onChanged})
       : _width = size == SwitcherSize.small
             ? 55
             : size == SwitcherSize.medium
@@ -141,15 +141,14 @@ class Switcher extends StatefulWidget {
   _SwitcherState createState() => _SwitcherState();
 }
 
-class _SwitcherState extends State<Switcher>
-    with SingleTickerProviderStateMixin {
-  AnimationController animationController;
-  Animation<double> animation;
-  bool turnState;
+class _SwitcherState extends State<Switcher> with SingleTickerProviderStateMixin {
+  late AnimationController animationController;
+  late Animation<double> animation;
+  late bool turnState;
   double value = 0.0;
-  Color transitionColor;
-  double switcherRadius;
-  double switcherButtonAngleTransform;
+  late Color transitionColor;
+  late double switcherRadius;
+  late double switcherButtonAngleTransform;
 
   @override
   void dispose() {
@@ -166,8 +165,7 @@ class _SwitcherState extends State<Switcher>
       upperBound: 1.0,
       duration: widget.animationDuration,
     );
-    animation =
-        CurvedAnimation(parent: animationController, curve: widget.curveType);
+    animation = CurvedAnimation(parent: animationController, curve: widget.curveType);
     animationController.addListener(() {
       setState(() {
         value = animation.value;
@@ -184,9 +182,7 @@ class _SwitcherState extends State<Switcher>
   _determine({bool changeState = false}) {
     setState(() {
       if (changeState) turnState = !turnState;
-      (turnState)
-          ? animationController.forward()
-          : animationController.reverse();
+      (turnState) ? animationController.forward() : animationController.reverse();
 
       widget.onChanged(turnState);
     });
@@ -203,19 +199,19 @@ class _SwitcherState extends State<Switcher>
       onDoubleTap: () {
         _action();
         if (widget.onDoubleTap != null) {
-          widget.onDoubleTap();
+          widget.onDoubleTap!();
         }
       },
       onTap: () {
         _action();
         if (widget.onTap != null) {
-          widget.onTap();
+          widget.onTap!();
         }
       },
       onPanEnd: (details) {
         _action();
         if (widget.onSwipe != null) {
-          widget.onSwipe();
+          widget.onSwipe!();
         }
       },
       child: SwitcherBody(
@@ -238,7 +234,7 @@ class _SwitcherState extends State<Switcher>
   }
 
   Color getTransitionColor() {
-    Color transitionColor = Color.lerp(widget.colorOff, widget.colorOn, value);
+    Color transitionColor = Color.lerp(widget.colorOff, widget.colorOn, value)!;
     return transitionColor;
   }
 

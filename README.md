@@ -47,7 +47,11 @@ dependencies:
 
 <img src="https://github.com/tiagosito/switcher/blob/main/doc/assets/switcher_05.gif?raw=true" width="50%" alt="Using switcher" />
 
+<img src="https://github.com/tiagosito/switcher/blob/main/doc/assets/switcher_06.gif?raw=true" width="50%" alt="Using switcher" />
+
 <img src="https://github.com/tiagosito/switcher/blob/main/doc/assets/switcher.gif?raw=true" width="50%" alt="Using switcher" />
+
+<img src="https://github.com/tiagosito/switcher/blob/main/doc/assets/switcher_07.gif?raw=true" width="50%" alt="Using switcher" />
 
 ```dart
 import 'package:switcher/switcher.dart';

@@ -4,21 +4,21 @@ import 'switcher_button_transform.dart';
 
 class SwitcherBody extends StatelessWidget {
   const SwitcherBody({
-    Key key,
-    @required this.value,
-    @required this.width,
-    @required this.height,
-    @required this.iconOn,
-    @required this.iconOff,
-    @required this.switcherRadius,
-    @required this.transitionColor,
-    @required this.switcherButtonSize,
-    @required this.switcherButtonColor,
-    @required this.switcherButtonRadius,
-    @required this.switcherButtonOffset,
-    @required this.switcherButtonPadding,
-    @required this.switcherButtonIconSize,
-    @required this.switcherButtonAngleTransform,
+    Key? key,
+    required this.value,
+    required this.width,
+    required this.height,
+    required this.iconOn,
+    required this.iconOff,
+    required this.switcherRadius,
+    required this.transitionColor,
+    required this.switcherButtonSize,
+    required this.switcherButtonColor,
+    required this.switcherButtonRadius,
+    required this.switcherButtonOffset,
+    required this.switcherButtonPadding,
+    required this.switcherButtonIconSize,
+    required this.switcherButtonAngleTransform,
   }) : super(key: key);
 
   final double value;
