@@ -1,6 +1,6 @@
 # [1.0.0]
 
-BREAKING: opt into NullSafety
+BREAKING: opt into null safety
 
 ## [0.0.1+2]
 
