@@ -141,7 +141,8 @@ class Switcher extends StatefulWidget {
   _SwitcherState createState() => _SwitcherState();
 }
 
-class _SwitcherState extends State<Switcher> with SingleTickerProviderStateMixin {
+class _SwitcherState extends State<Switcher>
+    with SingleTickerProviderStateMixin {
   AnimationController animationController;
   Animation<double> animation;
   bool turnState;
@@ -165,7 +166,8 @@ class _SwitcherState extends State<Switcher> with SingleTickerProviderStateMixin
       upperBound: 1.0,
       duration: widget.animationDuration,
     );
-    animation = CurvedAnimation(parent: animationController, curve: widget.curveType);
+    animation =
+        CurvedAnimation(parent: animationController, curve: widget.curveType);
     animationController.addListener(() {
       setState(() {
         value = animation.value;
@@ -182,7 +184,9 @@ class _SwitcherState extends State<Switcher> with SingleTickerProviderStateMixin
   _determine({bool changeState = false}) {
     setState(() {
       if (changeState) turnState = !turnState;
-      (turnState) ? animationController.forward() : animationController.reverse();
+      (turnState)
+          ? animationController.forward()
+          : animationController.reverse();
 
       widget.onChanged(turnState);
     });

@@ -22,7 +22,8 @@ class SwitcherButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Opacity(
-        opacity: isSwitcherOn ? value.clamp(0.0, 1.0) : (1 - value).clamp(0.0, 1.0),
+        opacity:
+            isSwitcherOn ? value.clamp(0.0, 1.0) : (1 - value).clamp(0.0, 1.0),
         child: Icon(
           isSwitcherOn ? iconOn : iconOff,
           size: switcherButtonIconSize,
