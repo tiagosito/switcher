@@ -1,6 +1,6 @@
 <img src="https://github.com/tiagosito/switcher/raw/main/doc/assets/switcher_logo_full2.png" width="100%" alt="logo" />
 <h2 align="center">
-  A beautiful and personalized switcher component.
+  A animated, beautiful and personalized switcher component.
 </h2>
 
 <p align="center">
@@ -13,7 +13,7 @@
   
 ## Overview
 
-A simple data grouper
+A animated and beautiful Switcher
 
 #### Contributing
   - [https://github.com/tiagosito/switcher](https://github.com/tiagosito/switcher)
@@ -28,7 +28,7 @@ dependencies:
   switcher: any
 ```
 
-### Adding, Select and Removing data :
+### See how:
 <img src="https://github.com/tiagosito/switcher/blob/main/doc/assets/switcher.gif?raw=true" width="30%" alt="Using switcher" />
 
 ```dart
