@@ -4,18 +4,20 @@
   A animated, beautiful and personalized switcher component.
 </h2>
 <h5 align="center">
-  Based on Eduardo Muñoz's 'lite_rolling_switch' widget https://github.com/cgustav/lite_rolling_switch
+  Based on Eduardo Muñoz's widget [lite_rolling_switch](https://github.com/cgustav/lite_rolling_switch)
 </h5>
 
-<br/>
+<p>&nbsp;</p>
 
+<p>
+
+</p>
 <p align="center">
 <a href="https://pub.dartlang.org/packages/switcher">
   <img alt="Pub Package" src="https://img.shields.io/pub/v/switcher.svg">
 </a>
   <a href="https://www.buymeacoffee.com/tiagosito" target="_blank"><img alt="Buy Me A Coffee" src="https://i.imgur.com/aV6DDA7.png" </a>
 </p>
- 
   
 ## Overview
 
