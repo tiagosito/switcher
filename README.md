@@ -26,11 +26,10 @@ A animated and beautiful Switcher
 #### Contributing
   - [https://github.com/tiagosito/switcher](https://github.com/tiagosito/switcher)
 
-
 #### Getting Started
 
-
 In _pubspec.yaml_:
+
 ```yaml
 dependencies:
   switcher: any
