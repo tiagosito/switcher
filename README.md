@@ -2,8 +2,12 @@
 <img src="https://github.com/tiagosito/switcher/raw/main/doc/assets/switcher_logo_full.png" width="100%" alt="logo" />
 <h2 align="center">
   A animated, beautiful and personalized switcher component.
-  Based on Eduardo Muñoz's 'lite_rolling_switch' widget https://github.com/cgustav/lite_rolling_switch
 </h2>
+<h5 align="center">
+  Based on Eduardo Muñoz's 'lite_rolling_switch' widget https://github.com/cgustav/lite_rolling_switch
+</h5>
+
+<br/>
 
 <p align="center">
 <a href="https://pub.dartlang.org/packages/switcher">
