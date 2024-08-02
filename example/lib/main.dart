@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -47,7 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text(
                       'Small',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 50),
                     Switcher(
@@ -69,7 +70,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text(
                       'Medium',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 20),
                     Switcher(
@@ -91,7 +93,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text(
                       'Large',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 20),
                     Switcher(
@@ -117,7 +120,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text(
                       'Small',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 50),
                     Switcher(
@@ -140,7 +144,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text(
                       'Medium',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 20),
                     Switcher(
@@ -163,13 +168,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text(
                       'Large',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 20),
                     Switcher(
                       value: false,
-                      iconOff: null,
                       size: SwitcherSize.large,
+                      labelOff: Text('is off'),
+                      labelOn: Text('is on'),
                       colorOff: Colors.indigo.withOpacity(0.3),
                       colorOn: Colors.indigo,
                       switcherButtonBoxShape: BoxShape.rectangle,
@@ -192,7 +199,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text(
                       'Small',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 50),
                     Switcher(
@@ -217,7 +225,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text(
                       'Medium',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 20),
                     Switcher(
@@ -241,14 +250,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text(
                       'Large',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 20),
                     Switcher(
                       value: false,
                       size: SwitcherSize.large,
                       switcherButtonRadius: 3,
-                      iconOff: null,
                       colorOff: Colors.brown.withOpacity(0.3),
                       colorOn: Colors.brown,
                       onChanged: (bool state) {
@@ -269,7 +278,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text(
                       'Small',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 50),
                     Switcher(
@@ -295,7 +305,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text(
                       'Medium',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 20),
                     Switcher(
@@ -320,14 +331,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text(
                       'Large',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 20),
                     Switcher(
                       value: false,
                       size: SwitcherSize.large,
                       switcherButtonRadius: 50,
-                      iconOff: null,
                       enabledSwitcherButtonRotate: false,
                       colorOff: Colors.blueGrey.withOpacity(0.3),
                       colorOn: Colors.blue,
@@ -349,7 +360,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text(
                       'Small',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 50),
                     Switcher(
@@ -376,7 +388,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text(
                       'Medium',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 20),
                     Switcher(
@@ -402,7 +415,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text(
                       'Large',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 20),
                     Switcher(

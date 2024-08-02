@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:switcher/core/switcher_body.dart';
 
@@ -23,10 +21,16 @@ class Switcher extends StatefulWidget {
   final Duration animationDuration;
   final IconData iconOn;
   final IconData iconOff;
+  final Widget? iconWidgetOn;
+  final Widget? iconWidgetOff;
   final Curve curveType;
   final Function? onTap;
   final Function? onDoubleTap;
   final Function? onSwipe;
+  final Widget? labelOn;
+  final Widget? labelOff;
+  final Color? buttonBackgroundColor;
+  final Color? borderColor;
 
   final double _width;
   final double _height;
@@ -41,6 +45,8 @@ class Switcher extends StatefulWidget {
       this.switcherButtonColor = Colors.white,
       this.switcherRadius = 50,
       this.switcherButtonRadius = 50,
+      this.labelOff,
+      this.labelOn,
       this.switcherButtonAngleTransform = 0,
       this.enabledSwitcherButtonRotate = true,
       this.switcherButtonBoxShape = BoxShape.circle,
@@ -53,7 +59,11 @@ class Switcher extends StatefulWidget {
       this.onTap,
       this.onDoubleTap,
       this.onSwipe,
-      required this.onChanged})
+      required this.onChanged,
+      this.buttonBackgroundColor,
+      this.borderColor,
+      this.iconWidgetOn,
+      this.iconWidgetOff})
       : _width = size == SwitcherSize.small
             ? 55
             : size == SwitcherSize.medium
@@ -223,7 +233,13 @@ class _SwitcherState extends State<Switcher>
         width: widget._width,
         height: widget._height,
         iconOn: widget.iconOn,
+        labelOff: widget.labelOff,
+        labelOn: widget.labelOn,
+        borderColor: widget.borderColor,
+        buttonBackgroundColor: widget.buttonBackgroundColor,
         iconOff: widget.iconOff,
+        iconWidgetOn: widget.iconWidgetOn,
+        iconWidgetOff: widget.iconWidgetOff,
         switcherRadius: switcherRadius,
         transitionColor: transitionColor,
         switcherButtonSize: widget._switcherButtonSize,

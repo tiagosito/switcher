@@ -18,10 +18,14 @@ class SwitcherButtonTransform extends StatelessWidget {
     required this.switcherButtonOffset,
     required this.switcherButtonIconSize,
     required this.switcherButtonAngleTransform,
+    this.iconWidgetOn,
+    this.iconWidgetOff,
   }) : super(key: key);
 
   final double value;
   final IconData iconOn;
+  final Widget? iconWidgetOn;
+  final Widget? iconWidgetOff;
   final IconData iconOff;
   final Color transitionColor;
   final double switcherButtonSize;
@@ -51,6 +55,7 @@ class SwitcherButtonTransform extends StatelessWidget {
                 value: value,
                 isSwitcherOn: false,
                 iconOff: iconOff,
+                iconWidget: iconWidgetOff,
                 iconOn: iconOn,
                 transitionColor: transitionColor,
                 switcherButtonIconSize: switcherButtonIconSize,
@@ -60,6 +65,7 @@ class SwitcherButtonTransform extends StatelessWidget {
                 isSwitcherOn: true,
                 iconOff: iconOff,
                 iconOn: iconOn,
+                iconWidget: iconWidgetOn,
                 transitionColor: transitionColor,
                 switcherButtonIconSize: switcherButtonIconSize,
               ),

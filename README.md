@@ -74,6 +74,7 @@ Switcher(
     size: SwitcherSize.large,
     switcherButtonRadius: 50,
     iconOff: null,
+
     enabledSwitcherButtonRotate: false,
     colorOff: Colors.blueGrey.withOpacity(0.3),
     colorOn: Colors.blue,
@@ -81,6 +82,22 @@ Switcher(
     //
     },
 ),
+
+
+// Switcher with labels
+Switcher(
+                      value: false,
+                      size: SwitcherSize.large,
+                      labelOff: Text('is off'), // label to display on off
+                      labelOn: Text('is on'),// label to display on off
+                      colorOff: Colors.indigo.withOpacity(0.3),
+                      colorOn: Colors.indigo,
+                      switcherButtonBoxShape: BoxShape.rectangle,
+                      enabledSwitcherButtonRotate: false,
+                      onChanged: (bool state) {
+                        //
+                      },
+                    ),
 ```
 
 ## Features and bugs

@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import 'switcher_button_transform.dart';
@@ -7,6 +9,8 @@ class SwitcherBody extends StatelessWidget {
     Key? key,
     required this.value,
     required this.width,
+    this.labelOff,
+    this.labelOn,
     required this.height,
     required this.iconOn,
     required this.iconOff,
@@ -19,15 +23,25 @@ class SwitcherBody extends StatelessWidget {
     required this.switcherButtonPadding,
     required this.switcherButtonIconSize,
     required this.switcherButtonAngleTransform,
+    this.buttonBackgroundColor,
+    this.borderColor,
+    this.iconWidgetOn,
+    this.iconWidgetOff,
   }) : super(key: key);
 
   final double value;
   final double width;
   final double height;
+  final Widget? labelOn;
+  final Widget? labelOff;
   final IconData iconOn;
   final IconData iconOff;
+  final Widget? iconWidgetOn;
+  final Widget? iconWidgetOff;
   final double switcherRadius;
   final Color transitionColor;
+  final Color? buttonBackgroundColor;
+  final Color? borderColor;
   final double switcherButtonSize;
   final Color switcherButtonColor;
   final double switcherButtonRadius;
@@ -43,14 +57,18 @@ class SwitcherBody extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(
-        color: transitionColor,
+        border: borderColor != null ? Border.all(color: borderColor!) : null,
+        color: buttonBackgroundColor ?? transitionColor,
         borderRadius: BorderRadius.circular(switcherRadius),
       ),
       child: Stack(
+        alignment: Alignment.centerLeft,
         children: <Widget>[
           SwitcherButtonTransform(
             value: value,
             iconOn: iconOn,
+            iconWidgetOn: iconWidgetOn,
+            iconWidgetOff: iconWidgetOff,
             transitionColor: transitionColor,
             switcherButtonSize: switcherButtonSize,
             switcherButtonRadius: switcherButtonRadius,
@@ -59,7 +77,23 @@ class SwitcherBody extends StatelessWidget {
             switcherButtonAngleTransform: switcherButtonAngleTransform,
             iconOff: iconOff,
             switcherButtonColor: switcherButtonColor,
-          )
+          ),
+          if (labelOn != null)
+            Positioned(
+              left: 0,
+              child: Opacity(
+                opacity: value.clamp(0.0, 1.0),
+                child: labelOn,
+              ),
+            ),
+          if (labelOff != null)
+            Positioned(
+              right: 0,
+              child: Opacity(
+                opacity: (1 - value).clamp(0.0, 1.0),
+                child: Align(child: labelOff),
+              ),
+            )
         ],
       ),
     );

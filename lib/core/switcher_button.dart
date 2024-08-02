@@ -9,11 +9,13 @@ class SwitcherButton extends StatelessWidget {
     required this.iconOff,
     required this.iconOn,
     required this.switcherButtonIconSize,
+    this.iconWidget,
   }) : super(key: key);
 
   final double value;
   final bool isSwitcherOn;
   final Color transitionColor;
+  final Widget? iconWidget;
   final IconData iconOn;
   final IconData iconOff;
   final double switcherButtonIconSize;
@@ -24,11 +26,12 @@ class SwitcherButton extends StatelessWidget {
       child: Opacity(
         opacity:
             isSwitcherOn ? value.clamp(0.0, 1.0) : (1 - value).clamp(0.0, 1.0),
-        child: Icon(
-          isSwitcherOn ? iconOn : iconOff,
-          size: switcherButtonIconSize,
-          color: transitionColor,
-        ),
+        child: iconWidget ??
+            Icon(
+              isSwitcherOn ? iconOn : iconOff,
+              size: switcherButtonIconSize,
+              color: transitionColor,
+            ),
       ),
     );
   }
